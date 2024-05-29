@@ -347,83 +347,83 @@ int frame_decode(uint8_t *buffer, uint8_t length, fsp_packet_t *pkt){
     return 0;
 }
 
-char pos_str2[10];
+//char pos_str2[10];
 
 int frame_processing(fsp_packet_t *fsp_pkt){
 	switch (fsp_pkt->type)
 	{
 		case FSP_PKT_TYPE_DATA:
 
-			Uart_sendstring(USART1, "DATA: ");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
-			Uart_sendstring(USART1, pos_str2);
+			// Uart_sendstring(USART1, "DATA: ");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 		case FSP_PKT_TYPE_DATA_WITH_ACK:
 
-			Uart_sendstring(USART1, "DATA ACK:");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
-			Uart_sendstring(USART1, pos_str2);
+			// Uart_sendstring(USART1, "DATA ACK:");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 		case FSP_PKT_TYPE_CMD:
 
-			Uart_sendstring(USART1, "CMD: ");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
+			// Uart_sendstring(USART1, "CMD: ");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 		case FSP_PKT_TYPE_CMD_WITH_ACK:
 
-			Uart_sendstring(USART1, "CMD ACK:");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
+			// Uart_sendstring(USART1, "CMD ACK:");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 		case FSP_PKT_TYPE_ACK:
 
-    		Uart_sendstring(USART1, "ACK: ");
+    		// Uart_sendstring(USART1, "ACK: ");
 
 			break;
 		case FSP_PKT_TYPE_NACK:
 
-    		Uart_sendstring(USART1, "NACK: ");
+    		// Uart_sendstring(USART1, "NACK: ");
 
 			break;
 		case FSP_PKT_TYPE_CMD_W_DATA:
 
-    		Uart_sendstring(USART1, "DATA CMD: ");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
-			Uart_sendstring(USART1, pos_str2);
+   //  		Uart_sendstring(USART1, "DATA CMD: ");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 		case FSP_PKT_TYPE_CMD_W_DATA_ACK:
 
-    		Uart_sendstring(USART1, "DATA CMD ACK: ");
-			sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
-			Uart_sendstring(USART1, pos_str2);
-			sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
-			Uart_sendstring(USART1, pos_str2);
+   //  		Uart_sendstring(USART1, "DATA CMD ACK: ");
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[0]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[1]);
+			// Uart_sendstring(USART1, pos_str2);
+			// sprintf(pos_str2, "%d", fsp_pkt->payload[2]);
+			// Uart_sendstring(USART1, pos_str2);
 
 			break;
 
 		default:
 
-			Uart_sendstring(USART1, "DEFAULT");
+			// Uart_sendstring(USART1, "DEFAULT");
 
 			break;
 
