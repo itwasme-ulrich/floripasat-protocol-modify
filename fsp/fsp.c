@@ -7,7 +7,7 @@
 
 #include "fsp.h"
 #include "crc.h"
-#include "../../BSP/UART/uart.h"
+
 #include "string.h"
 #include "stdio.h"
 
