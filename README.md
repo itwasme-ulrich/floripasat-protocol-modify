@@ -21,11 +21,11 @@ Giao thức truyền gói tin giữa các board, tham khảo từ Floripasat
 ## Địa chỉ đích
 Hiện tại trong file `fsp.h` được định nghĩa sẵn:
 ```c
-#define  FSP_ADR_COPC 1 /**< COPC module address. */
-#define  FSP_ADR_PMU 2 /**< PMU module address. */
-#define  FSP_ADR_PDU 3 /**< PDU module address. */
-#define  FSP_ADR_CAM 4 /**< CAM module address. */
-#define  FSP_ADR_IOU 5 /**< IOU module address. */
+#define  FSP_ADR_COPC 	1 /**< COPC module address. */
+#define  FSP_ADR_PMU 	2 /**< PMU module address. */
+#define  FSP_ADR_PDU 	3 /**< PDU module address. */
+#define  FSP_ADR_CAM 	4 /**< CAM module address. */
+#define  FSP_ADR_IOU 	5 /**< IOU module address. */
 ```
 |  Module| Địa chỉ |
 |--|--|
@@ -36,6 +36,9 @@ Hiện tại trong file `fsp.h` được định nghĩa sẵn:
 | IOU | 5 |
 
 ## Byte định nghĩa, Byte chuyển đổi, Byte chèn
+
+![image](https://github.com/itwasme-ulrich/floripasat-protocol-modify/assets/110149749/4037fab1-cb88-4cf4-a94f-d6b7a0dd5ca6)
+
 | Byte| Định nghĩa| Giá trị |
 |--|--|--|
 | SOD | Bắt đầu của một Frame | 0xCA |
@@ -53,13 +56,13 @@ Nhờ vậy, không có Byte nào SOD và EOF nằm trong dữ liệu, đảm b�
 // Types of packets
 
 #define  FSP_PKT_TYPE_DATA 				1
-#define  FSP_PKT_TYPE_DATA_WITH_ACK 	2
+#define  FSP_PKT_TYPE_DATA_WITH_ACK 			2
 #define  FSP_PKT_TYPE_CMD 				3
-#define  FSP_PKT_TYPE_CMD_WITH_ACK 		4
+#define  FSP_PKT_TYPE_CMD_WITH_ACK 			4
 #define  FSP_PKT_TYPE_ACK 				5 
 #define  FSP_PKT_TYPE_NACK 				6
-#define  FSP_PKT_TYPE_CMD_W_DATA 		7
-#define  FSP_PKT_TYPE_CMD_W_DATA_ACK 	8
+#define  FSP_PKT_TYPE_CMD_W_DATA 			7
+#define  FSP_PKT_TYPE_CMD_W_DATA_ACK 			8
 ```
 | Type| Định nghĩa| Quy ước |
 |--|--|--|
@@ -76,8 +79,8 @@ Nhờ vậy, không có Byte nào SOD và EOF nằm trong dữ liệu, đảm b�
 Các lệnh ví dụ được định nghĩa sẵn
 ```c
 #define  FSP_CMD_HEART_BEAT 						1 
-#define  FSP_CMD_PDU_SINGLE_POWER_CONTROL 			2
-#define  FSP_CMD_PDU_SINGLE_POWER_STATUS_REQUEST 	3 
+#define  FSP_CMD_PDU_SINGLE_POWER_CONTROL 				2
+#define  FSP_CMD_PDU_SINGLE_POWER_STATUS_REQUEST 			3 
 #define  FSP_CMD_HIBERNATION 						4 
 #define  FSP_CMD_RESET_CHARGE 						5
 ```
@@ -92,7 +95,7 @@ Việc tính toán độ dài, CRC sẽ được tính toán trước khi Encode
 #define  FSP_PKT_WRONG_ADR 			3 /**< Packet with wrong address. */
 #define  FSP_PKT_ERROR 				4 /**< Packet with error. */
 #define  FSP_PKT_CRC_FAIL 			5 /**< Packet check CRC Fail. */
-#define  FSP_PKT_WRONG_LENGTH 		6 /**< Packet wrong length. */
+#define  FSP_PKT_WRONG_LENGTH 			6 /**< Packet wrong length. */
 ```
 Sử dụng bằng việc ánh xạ bảng:
 ```c
